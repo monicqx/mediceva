@@ -1,0 +1,41 @@
+package javaapplication7;
+
+import java.net.URL;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
+
+public class JavaApplication7 {
+
+    public static void main(String[] args) {
+        
+try {
+    URL url = new URL("http://82.208.186.138:8080/Medi/webresources/users");        //aici dam url
+    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+    DocumentBuilder db = dbf.newDocumentBuilder();
+    Document doc = db.parse(new InputSource(url.openStream()));
+    doc.getDocumentElement().normalize();
+
+    NodeList nodeList1 = doc.getElementsByTagName("users");
+    for (int i = 0; i < nodeList1.getLength(); i++) {
+        Node nod1 = nodeList1.item(i).getFirstChild();
+        System.out.println(nod1.getTextContent());
+        while(nod1.getNextSibling()!=null)
+        {   
+            nod1 = nod1.getNextSibling();
+            System.out.println(nod1.getTextContent());
+        }
+    }
+} 
+catch(Exception e) {
+
+}
+
+
+    }
+}
+    
