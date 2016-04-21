@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:theme ="@android:style/Theme.NoTitleBar.Fullscreen"
+    android:background="@drawable/gradientbackground"
+    tools:context="com.example.monicastanescu.mediceva.AddAppointmentActivity">
+    <Spinner
+        android:id="@+id/spTypes"
+        android:layout_width="fill_parent"
+        android:layout_height="83dp"
+        android:background="@drawable/buttonlogin"
+        android:layout_marginTop="10dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="83dp"
+        android:background="@drawable/button3"
+        android:textColor="#FFFFFF"
+        android:text="CHOOSE A DATE"
+        android:onClick="showDatePickerDialog"
+        android:id="@+id/btPickDate"
+        android:layout_below="@+id/spTypes"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:background="@drawable/button2"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:text="ADD TIME"
+        android:id="@+id/btTime"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/btPickDate"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etLocation"
+        android:layout_below="@+id/btTime"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Location" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etDoctor"
+        android:layout_below="@+id/etLocation"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/etLocation"
+        android:hint="Doctor" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etPhone"
+        android:layout_below="@+id/etDoctor"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/etDoctor"
+        android:hint="Phone Number" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etDescription"
+        android:layout_below="@+id/etPhone"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Description" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/etFrequency"
+        android:layout_below="@+id/etDescription"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/etDescription"
+        android:hint="Frequency (Number of months)" />
+
+</RelativeLayout>

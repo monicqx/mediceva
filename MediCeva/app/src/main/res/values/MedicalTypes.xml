@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="types_array">
+        <item>Allergist</item>
+        <item>Cardiologist</item>
+        <item>Dentist</item>
+        <item>Dermatologist</item>
+        <item>Gynecologist</item>
+        <item>Nephrologist</item>
+        <item>Neurosurgeon</item>
+        <item>Oncologist</item>
+        <item>Opthalmologist</item>
+        <item>Ortopedist</item>
+        <item>Psychiatrist</item>
+        <item>Pulmonologist</item>
+        <item>Rheumatologist</item>
+        <item>Urologist</item>
+    </string-array>
+</resources>
